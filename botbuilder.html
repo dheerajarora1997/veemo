@@ -35,7 +35,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-2">
+				<div class="col-2 text-right">
 					<button class="btn btn-outline-anchor rounded-sm px-4">Next</button>
 				</div>
 			</div>
@@ -139,22 +139,22 @@
 						</div>
 					</a>
 					<div id="differ" class="my-5"></div>
-					<a href="javascript:void(0)" id="draggableTwo"
+					<a href="#off-canvas-popup" id="draggableTwo"
 						class="text-decoration-none d-inline-block rounded-sm border-warning">
 						<div class="card border-0">
 							<div class="card-body d-flex align-items-center p-3">
 								<i class="fa fa-arrows mr-2" aria-hidden="true"></i>
-								<span>Bot is triggered if...</span>
+								<span>Bot First Action</span>
 							</div>
 						</div>
 					</a>
 					<div id="differTwo" class="my-5"></div>
-					<a href="javascript:void(0)" id="draggableThree"
+					<a href="#off-canvas-popup" id="draggableThree"
 						class="text-decoration-none d-inline-block rounded-sm border-info">
 						<div class="card border-0">
 							<div class="card-body d-flex align-items-center p-3">
 								<i class="fa fa-arrows mr-2" aria-hidden="true"></i>
-								<span>Bot is triggered if...</span>
+								<span>Bot Second Action</span>
 							</div>
 						</div>
 					</a>
@@ -163,71 +163,150 @@
 		</div>
 	</main>
 	<footer>
-
+		<div class="p-2 bg-primary">
+			<p class="text-right mb-0">
+				<a href="https://www.linkedin.com/in/dheerajarora1997" class="text-white small" target="_blank">
+					Dheeraj Arora
+				</a>
+			</p>
+		</div>
 	</footer>
-	<div class="modal fade offCanvasModal" id="off-canvas-popup">
-		<div class="modal-dialog modal-llg" role="document">
+	<div class="modal fade offCanvasModal right" id="off-canvas-popup">
+		<div class="modal-dialog modal-md" role="document">
 			<div class="modal-content h-100">
-				<div class="modal-header border-bottom">
-					asdasfas
+				<div class="modal-header border-bottom pr-5 align-items-center">
+					<div class="heading">
+						<i class="fa fa-arrows mr-2" aria-hidden="true"></i>
+					</div>
+					<div class="action">
+						<a href="javascript:void(0);" class="text-anchor text-decoration-none">How to use</a>
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				</div>
+				<div class="modal-body">
+					<h3 class="h6 border-bottom py-2 mb-4">Bot is triggered if…</h3>
+					<p class="font-weight-normal">Trigger block is the prerequisite with which its underlying conversation flow is executed</p>
+					<small class="text-secondary">This chatbot will be displayed only when the below mentioned criteria's are fulfilled</small>
+					<div class="form-group">
+						<label for="range-input">Restrict the bot to the following date range</label>
+						<input type="text" class="form-control text-capitalize" id="range-input">
+					</div>
+					<div class="form-group">
+						<label for="range-input">Restrict the bot to the following date range</label>
+						<select name="" id="" class="form-control text-capitalize">
+							<option value="">Options</option>
+							<option value="">Options</option>
+							<option value="">Options</option>
+						</select>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-anchor">Reset</button>
+						<button class="btn btn-primary">Apply</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</body>
 
 
-	<script src="./dist/js/vendor/jquery/jquery.min.js"></script>
-	<script src="./dist/js/vendor/bootstrap-js/popper.min.js"></script>
-	<script src="./dist/js/vendor/bootstrap-js/bootstrap.min.js"></script>
-	<script src="./dist/js/vendor/plain-draggable/plain-draggable.min.js"></script>
-	<script src="./dist/js/vendor/leader-line/leader-line.min.js"></script>
+<script src="./dist/js/vendor/jquery/jquery.min.js"></script>
+<script src="./dist/js/vendor/bootstrap-js/popper.min.js"></script>
+<script src="./dist/js/vendor/bootstrap-js/bootstrap.min.js"></script>
+<script src="./dist/js/vendor/plain-draggable/plain-draggable.min.js"></script>
+<script src="./dist/js/vendor/leader-line/leader-line.min.js"></script>
 
-	<script>
-		$('[data-toggle="popover"]').popover();
-		$('[data-toggle="tooltip"]').tooltip();
+<script>
+	$('[data-toggle="popover"]').popover();
+	$('[data-toggle="tooltip"]').tooltip();
 
+	window.addEventListener('load', function () {
+		const target1 = document.getElementById('draggable');
+		const target2 = document.getElementById('draggableTwo');
+		const target3 = document.getElementById('draggableThree');
 
-		window.addEventListener('load', function () {
-
-			const target1 = document.getElementById('draggable');
-			const target2 = document.getElementById('draggableTwo');
-			const target3 = document.getElementById('draggableThree');
-
-
-			const line = new LeaderLine(target1, target2,
-				{ startPlug: 'arrow', endPlug: 'arrow' });
-
-			const line2 = new LeaderLine(target2, target3,
-				{ startPlug: 'arrow', endPlug: 'arrow' });
-
-
-			new PlainDraggable(target1, {
-				onMove: function () { line.position(); },
-				onClick: () => {
-					console.log('click event')
-				},
-				onMoveStart: function () { console.log('somehow here'); line.dash = { animation: true }; },
-				onDragEnd: function () { line.dash = false; }
-			});
-
-			new PlainDraggable(target2, {
-				onMove: function () { line.position(); line2.position(); },
-				onMoveStart: function () { line.dash = { animation: true }; line2.dash = { animation: true }; },
-				onDragEnd: function () { line.dash = false; line2.dash = false; },
-				zIndex: false
-			});
-
-			new PlainDraggable(target3, {
-				onMove: function () { line2.position(); },
-				onMoveStart: function () { line2.dash = { animation: true }; },
-				onDragEnd: function () { line2.dash = false; },
-				zIndex: false
-			});
-
-
+		const line = new LeaderLine(target1, target2, {
+			startPlug: 'arrow',
+			endPlug: 'arrow'
 		});
 
-	</script>
-</body>
+		const line2 = new LeaderLine(target2, target3, {
+			startPlug: 'arrow',
+			endPlug: 'arrow'
+		});
+
+		const whetherDragged = {
+			target1: false,
+			target2: false,
+			target3: false
+		};
+
+		new PlainDraggable(target1, {
+			onMove: function () {
+				line.position();
+			},
+			onMoveStart: function () {
+				line.dash = { animation: true };
+				whetherDragged.target1 = true;
+			},
+			onDragEnd: function () {
+				line.dash = false;
+
+				if (!whetherDragged.target1) {
+					// open modal
+					$("#off-canvas-popup").modal();
+				}
+
+				whetherDragged.target1 = false;
+			}
+		});
+
+		new PlainDraggable(target2, {
+			onMove: function () {
+				line.position();
+				line2.position();
+			},
+			onMoveStart: function () {
+				line.dash = { animation: true };
+				line2.dash = { animation: true };
+				whetherDragged.target2 = true;
+			},
+			onDragEnd: function () {
+				line.dash = false;
+				line2.dash = false;
+
+				if (!whetherDragged.target2) {
+					// open modal
+					$("#off-canvas-popup").modal();
+				}
+
+				whetherDragged.target2 = false;
+			},
+			zIndex: false
+		});
+
+		new PlainDraggable(target3, {
+			onMove: function () {
+				line2.position();
+			},
+			onMoveStart: function () {
+				line2.dash = { animation: true };
+				whetherDragged.target3 = true;
+			},
+			onDragEnd: function () {
+				line2.dash = false;
+
+				if (!whetherDragged.target3) {
+					// open modal
+					$("#off-canvas-popup").modal();
+				}
+				whetherDragged.target3 = false;
+			},
+			zIndex: false
+		});
+	});
+</script>
 
 </html>

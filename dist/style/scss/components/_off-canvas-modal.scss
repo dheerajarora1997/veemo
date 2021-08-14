@@ -126,7 +126,8 @@ $modal-sm : 300px;
                 .modal-dialog {
                     right: 0;
                 }
-                .modal-detail{
+
+                .modal-detail {
                     right: $modal-md;
                 }
             }
@@ -154,6 +155,19 @@ $modal-sm : 300px;
         padding: .75rem;
         border-radius: 0;
 
+        .heading {
+            .fa {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 35px;
+                height: 35px;
+                border-radius: 100%;
+                background: rgba(40, 167, 69, .3);
+                color: #28a745;
+            }
+        }
+
         .modal-title {
             /*color:#fff;*/
             margin: 0;
@@ -163,7 +177,7 @@ $modal-sm : 300px;
             // ----------------------
             position: absolute;
             right: 28px;
-            top: 24px;
+            top: 30px;
             border: 0;
             background: none;
             cursor: pointer;
@@ -175,14 +189,17 @@ $modal-sm : 300px;
             align-items: center;
             padding: .25rem;
             width: 31px;
-            &:hover{
-                background: rgba(0,0,0,.1);
+
+            &:hover {
+                background: rgba(0, 0, 0, .05);
                 color: red;
             }
         }
     }
 
     .modal-footer {
+        display: flex;
+        justify-content: space-between;
         padding: 8px 15px;
         text-align: left;
         border-top: 1px solid #ddd;
@@ -201,16 +218,6 @@ $modal-sm : 300px;
         border-radius: 0px;
     }
 }
-
-/*** Date Range Picker z-index value increase for popup
-.daterangepicker {
-    z-index: 99911 !important;
-}
-
-/*--- Body scroll hidden
-body.scrollHidden{
-    overflow: hidden!important;
-}*/
 
 @media only screen and (max-width:767px) {
     .modal {

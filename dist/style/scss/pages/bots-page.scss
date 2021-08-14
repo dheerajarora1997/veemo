@@ -1,1 +1,19 @@
-@import '../components/header-step-nav', '../components/bot-builder', '../components/builder-navigation', '../components/dragable-area', '../components/off-canvas-modal';
+@import '../components/header-step-nav', '../components/bot-builder', '../components/builder-navigation', '../components/dragable-area', '../components/off-canvas-modal', '../layout/form';
+
+.bot-list {
+    .bot-option {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        border-radius: 100%;
+        justify-content: center;
+        background: rgba(0,0,0,.02);
+        &:hover{
+            background: rgba(0,0,0,.04);
+        }
+    }
+    #no-bot-found{
+        background: none !important;
+    }
+}

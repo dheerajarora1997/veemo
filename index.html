@@ -35,84 +35,153 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-2">
+				<div class="col-2 text-right">
 					<button class="btn btn-outline-anchor rounded-sm px-4">Next</button>
 				</div>
 			</div>
 		</div>
 	</header>
 	<main>
-		<div class="d-block">
-			<div id="collapseable-section" class="position-relative">
-				<div class="container">
-					<form class="mt-4">
-						<p>Lorem ipsum dolor sit amet, consectetur
-							<span id="draggable" style="background-color: lightskyblue;">adipiscing</span> elit, sed
-							do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							<span id="differ"> space needed</span>
-							quis nostrud exercitation <span id="draggableTwo">two</span> ullamco laboris nisi ut
-							aliquip ex ea commodo consequat.
-						</p>
-					</form>
+		<div class="container">
+			<div class="pt-4 bot-list">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="d-flex">
+							<div>
+								<h2 class="h5">Bot Builder</h2>
+								<p>Manage your bots, or build new ones for different channels or web pages. Every single
+									bot under your account is listed here.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 text-right">
+						<a href="./botbuilder.html" class="btn btn-anchor self-align-start text-white"
+							id="build-bot">Build a Bot</a>
+					</div>
+					<div class="col-12 text-center">
+						<div class="row justify-content-center">
+							<div class="col-3">
+								<img class="img-fluid" src="./dist/img/no-data.png" alt="no bot found"
+									id="no-bot-found">
+							</div>
+							<div class="col-12 text-center my-3">
+								<h3 class="text-muted mb-0 h5">Don't have a bot?</h3>
+								<p class="text-muted">Build one by clicking the above button</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-12">
+						<small class="font-weight-light mb-2 d-inline-block">2 bots created</small>
+					</div>
+					<div class="col-6">
+						<div class="card mb-3 shadow border-0">
+							<div class="card-body">
+								<div class="row align-items-center">
+									<div class="col-8">
+										<h3 class="h6 text-primary mb-0">First ChatBot</h3>
+										<small class="text-secondary">Not Yet Deployed</small>
+									</div>
+									<div class="col-1 text-right">
+										<a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom"
+											title="ChatBot web" data-container="body">
+											<i class="fa fa-globe fa-lg" aria-hidden="true"></i>
+										</a>
+									</div>
+									<div class="col-1 text-right">
+										<div class="dropdown">
+											<a class="dropdown-toggle content-none bot-option text-decoration-none"
+												type="button" id="dropdownMenuButton" data-toggle="dropdown"
+												aria-haspopup="true" aria-expanded="false">
+												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+											</a>
+											<div class="dropdown-menu py-0 border-0 shadow-lg"
+												aria-labelledby="dropdownMenuButton">
+												<a class="dropdown-item" href="javascript:void(0);">Edit</a>
+												<a class="dropdown-item" href="javascript:void(0);">Share</a>
+												<a class="dropdown-item bg-danger text-white"
+													href="javascript:void(0);">Delete</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-2 text-right">
+										<label class="switch mb-0">
+											<input type="checkbox" id="auto-play">
+											<span class="slider round"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="card mb-3 shadow border-0">
+							<div class="card-body">
+								<div class="row align-items-center">
+									<div class="col-8">
+										<h3 class="h6 text-primary mb-0">Facebook ChatBot</h3>
+										<small class="text-secondary">Not Yet Deployed</small>
+									</div>
+									<div class="col-1 text-right">
+										<a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom"
+											title="ChatBot Facebook" data-container="body">
+											<i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+										</a>
+									</div>
+									<div class="col-1 text-right">
+										<div class="dropdown">
+											<a class="dropdown-toggle content-none bot-option text-decoration-none"
+												type="button" id="dropdownMenuButton" data-toggle="dropdown"
+												aria-haspopup="true" aria-expanded="false">
+												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+											</a>
+											<div class="dropdown-menu py-0 border-0 shadow-lg"
+												aria-labelledby="dropdownMenuButton">
+												<a class="dropdown-item" href="javascript:void(0);">Edit</a>
+												<a class="dropdown-item" href="javascript:void(0);">Share</a>
+												<a class="dropdown-item bg-danger text-white"
+													href="javascript:void(0);">Delete</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-2 text-right">
+										<label class="switch mb-0">
+											<input type="checkbox" id="auto-play">
+											<span class="slider round"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</main>
 	<footer>
-
+		<div class="p-2 bg-primary">
+			<p class="text-right mb-0">
+				<a href="https://www.linkedin.com/in/dheerajarora1997" class="text-white small" target="_blank">
+					Dheeraj Arora
+				</a>
+			</p>
+		</div>
 	</footer>
-	<script src="./dist/js/vendor/jquery/jquery.min.js"></script>
-	<script src="./dist/js/vendor/bootstrap-js/popper.min.js"></script>
-	<script src="./dist/js/vendor/bootstrap-js/bootstrap.min.js"></script>
-	<script src="./dist/js/vendor/plain-draggable/plain-draggable.min.js"></script>
-	<script src="./dist/js/vendor/leader-line/leader-line.min.js"></script>
-
-	<script>
-		draggable = new PlainDraggable(document.getElementById('draggable'));
-		draggable = new PlainDraggable(document.getElementById('draggableTwo'));
-
-		window.addEventListener('load', function () {
-			'use strict';
-
-			var target1 = document.getElementById('draggableTwo'),
-				target2 = document.getElementById('draggable'),
-				wallBBox = document.getElementById('differ').getBoundingClientRect(),
-				line;
-
-			wallBBox = {
-				top: wallBBox.top + window.pageYOffset - target1.getBoundingClientRect().height,
-				right: wallBBox.right + window.pageXOffset
-			};
-
-			new PlainDraggable(target1, {
-				onDrag: function (moveTo) {
-					var rect = this.rect;
-					if (moveTo.left < wallBBox.right && moveTo.top > wallBBox.top) { // Inside
-						if (rect.left >= wallBBox.right) {
-							moveTo.left = wallBBox.right;
-						} else if (rect.top <= wallBBox.top) { // Avoid fixing both left and top.
-							moveTo.top = wallBBox.top;
-						}
-					}
-				},
-				onMove: function () { line.position(); },
-				onMoveStart: function () { line.dash = { animation: true }; },
-				onDragEnd: function () { line.dash = false; }
-			});
-
-			new PlainDraggable(target2, {
-				onMove: function () { line.position(); },
-				onMoveStart: function () { line.dash = { animation: true }; },
-				onDragEnd: function () { line.dash = false; },
-				zIndex: false
-			});
-
-			line = new LeaderLine(target2, target1,
-				{ startPlug: 'arrow', endPlug: 'arrow' });
-
-		});
-
-	</script>
 </body>
+<script src="./dist/js/vendor/jquery/jquery.min.js"></script>
+<script src="./dist/js/vendor/bootstrap-js/popper.min.js"></script>
+<script src="./dist/js/vendor/bootstrap-js/bootstrap.min.js"></script>
+<script src="./dist/js/vendor/leader-line/leader-line.min.js"></script>
+
+<script>
+	$('[data-toggle="popover"]').popover();
+	$('[data-toggle="tooltip"]').tooltip();
+	window.addEventListener('load', function () {
+		new LeaderLine(
+			LeaderLine.mouseHoverAnchor(document.getElementById('no-bot-found'), 'draw',
+				{ animOptions: { duration: 2000 } }, { style: { backgroundColor: null } }),
+			document.getElementById('build-bot')
+		);
+	});
+</script>
 
 </html>
