@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./dist/style/css/style.css">
+	<link rel="stylesheet" href="./dist/style/css/pages/bots-page.css">
+</head>
+
+<body>
+	<header class="bg-primary py-3">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-2">
+					<button class="btn btn-outline-light rounded-sm	px-4">Exit</button>
+				</div>
+				<div class="col-8">
+					<div class="d-flex justify-content-center header-step-nav">
+						<ul class="mb-0 list-style-none d-flex">
+							<li>
+								<a href="./index.html" class="text-white text-decoration-none px-4 pb-2">
+									<i class="fa fa-reddit-alien" aria-hidden="true"></i>
+									Added Chatbots
+								</a>
+							</li>
+							<li>
+								<a href="./botbuilder.html" class="text-white text-decoration-none px-4 pb-2 active">
+									<i class="fa fa-cogs" aria-hidden="true"></i>
+									Chatbot Builder
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-2">
+					<button class="btn btn-outline-anchor rounded-sm px-4">Next</button>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="d-block">
+			<div class="position-relative chat-bot-builder">
+				<div class="builder-navigation position-absolute">
+					<div class="top-nav">
+						<div class="card bg-white p-1 border-0 shadow-sm">
+							<a href="javascript:void(0)" class="p-1">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</a>
+						</div>
+						<div class="expandable-search d-none">
+							<input type="search" name="" id="">
+						</div>
+					</div>
+					<div class="bottom-nav">
+						<div class="d-flex flex-column">
+							<div class="card bg-white p-1 border-0 shadow-sm mb-2 align-self-start">
+								<a href="javascript:void(0)" class="text-center p-1 d-block" data-toggle="tooltip"
+									data-placement="right" data-container="body" data-trigger="hover"
+									data-content="Auto Layout" title="Auto Layout">
+									<i class="fa fa-magic" aria-hidden="true"></i>
+								</a>
+							</div>
+							<div class="card bg-white p-1 border-0 shadow-sm mb-2 align-self-start">
+								<a href="javascript:void(0)" class="text-center p-1 d-block" data-toggle="tooltip"
+									data-placement="right" data-container="body" data-trigger="hover"
+									data-content="Expanded View" title="Expanded View">
+									<i class="fa fa-arrows-alt" aria-hidden="true"></i>
+								</a>
+							</div>
+							<div class="card bg-white p-1 border-0 shadow-sm mb-2 align-self-start">
+								<a href="javascript:void(0)" class="text-center p-1 d-block" data-toggle="tooltip"
+									data-placement="right" data-container="body" data-trigger="hover"
+									data-content="Minimap" title="Minimap">
+									<i class="fa fa-map-o" aria-hidden="true"></i>
+								</a>
+							</div>
+							<div class="card bg-white p-1 border-0 shadow-sm mb-2 align-self-start">
+								<a href="javascript:void(0)" class="text-center p-1 d-block" data-toggle="tooltip"
+									data-placement="right" data-container="body" data-trigger="hover"
+									data-content="Undo" title="Undo">
+									<i class="fa fa-undo" aria-hidden="true"></i>
+								</a>
+								<a href="javascript:void(0)" class="text-center p-1 d-block" data-toggle="tooltip"
+									data-placement="right" data-container="body" data-trigger="hover"
+									data-content="Redo" title="Redo">
+									<i class="fa fa-repeat" aria-hidden="true"></i>
+								</a>
+							</div>
+							<div class="d-flex">
+								<div class="card bg-white p-1 border-0 shadow-sm mb-2 w-30 align-self-start">
+									<a href="javascript:void(0)" class="text-center p-1 d-block" data-toggle="tooltip"
+										data-placement="right" data-container="body" data-trigger="hover"
+										data-content="Zoom In" title="Zoom In">
+										<i class="fa fa-search-plus" aria-hidden="true"></i>
+									</a>
+									<a href="javascript:void(0)" class="text-center p-1 d-block" data-toggle="tooltip"
+										data-placement="right" data-container="body" data-trigger="hover"
+										data-content="Zoom Out" title="Zoom Out">
+										<i class="fa fa-search-minus" aria-hidden="true"></i>
+									</a>
+								</div>
+								<div class="card bg-white p-1 border-0 shadow-sm mb-2 w-100 ml-3 align-self-end">
+									<a href="javascript:void(0)"
+										class="text-center p-1 d-block small no-wrap text-decoration-none font-weight-bold">
+										Watch tutorial
+									</a>
+								</div>
+							</div>
+							<div class="d-flex">
+								<div class="card bg-white p-1 border-0 shadow-sm mb-2 w-30 align-self-start">
+									<a href="javascript:void(0)" class="text-center p-1 d-block" data-toggle="tooltip"
+										data-placement="right" data-container="body" data-trigger="hover"
+										data-content="Version Control" title="Version Control">
+										<i class="fa fa-clock-o" aria-hidden="true"></i>
+									</a>
+								</div>
+								<div class="card bg-white p-1 border-0 shadow-sm mb-2 w-100 ml-3">
+									<a href="javascript:void(0)"
+										class="text-center p-1 d-block small no-wrap text-decoration-none font-weight-bold">
+										Zoom to content
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dragable-area text-center pt-3">
+					<a href="#off-canvas-popup" id="draggable"
+						class="text-decoration-none d-inline-block rounded-sm border-success">
+						<div class="card border-0">
+							<div class="card-body d-flex align-items-center p-3">
+								<i class="fa fa-arrows mr-2" aria-hidden="true"></i>
+								<span>Bot is triggered if...</span>
+							</div>
+						</div>
+					</a>
+					<div id="differ" class="my-5"></div>
+					<a href="javascript:void(0)" id="draggableTwo"
+						class="text-decoration-none d-inline-block rounded-sm border-warning">
+						<div class="card border-0">
+							<div class="card-body d-flex align-items-center p-3">
+								<i class="fa fa-arrows mr-2" aria-hidden="true"></i>
+								<span>Bot is triggered if...</span>
+							</div>
+						</div>
+					</a>
+					<div id="differTwo" class="my-5"></div>
+					<a href="javascript:void(0)" id="draggableThree"
+						class="text-decoration-none d-inline-block rounded-sm border-info">
+						<div class="card border-0">
+							<div class="card-body d-flex align-items-center p-3">
+								<i class="fa fa-arrows mr-2" aria-hidden="true"></i>
+								<span>Bot is triggered if...</span>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+
+	</footer>
+	<div class="modal fade offCanvasModal" id="off-canvas-popup">
+		<div class="modal-dialog modal-llg" role="document">
+			<div class="modal-content h-100">
+				<div class="modal-header border-bottom">
+					asdasfas
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="./dist/js/vendor/jquery/jquery.min.js"></script>
+	<script src="./dist/js/vendor/bootstrap-js/popper.min.js"></script>
+	<script src="./dist/js/vendor/bootstrap-js/bootstrap.min.js"></script>
+	<script src="./dist/js/vendor/plain-draggable/plain-draggable.min.js"></script>
+	<script src="./dist/js/vendor/leader-line/leader-line.min.js"></script>
+
+	<script>
+		$('[data-toggle="popover"]').popover();
+		$('[data-toggle="tooltip"]').tooltip();
+
+
+		window.addEventListener('load', function () {
+
+			const target1 = document.getElementById('draggable');
+			const target2 = document.getElementById('draggableTwo');
+			const target3 = document.getElementById('draggableThree');
+
+
+			const line = new LeaderLine(target1, target2,
+				{ startPlug: 'arrow', endPlug: 'arrow' });
+
+			const line2 = new LeaderLine(target2, target3,
+				{ startPlug: 'arrow', endPlug: 'arrow' });
+
+
+			new PlainDraggable(target1, {
+				onMove: function () { line.position(); },
+				onClick: () => {
+					console.log('click event')
+				},
+				onMoveStart: function () { console.log('somehow here'); line.dash = { animation: true }; },
+				onDragEnd: function () { line.dash = false; }
+			});
+
+			new PlainDraggable(target2, {
+				onMove: function () { line.position(); line2.position(); },
+				onMoveStart: function () { line.dash = { animation: true }; line2.dash = { animation: true }; },
+				onDragEnd: function () { line.dash = false; line2.dash = false; },
+				zIndex: false
+			});
+
+			new PlainDraggable(target3, {
+				onMove: function () { line2.position(); },
+				onMoveStart: function () { line2.dash = { animation: true }; },
+				onDragEnd: function () { line2.dash = false; },
+				zIndex: false
+			});
+
+
+		});
+
+	</script>
+</body>
+
+</html>

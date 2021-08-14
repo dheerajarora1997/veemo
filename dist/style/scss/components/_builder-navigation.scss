@@ -1,0 +1,13 @@
+.builder-navigation{
+    left: 10px;
+    height: calc(100vh - 100px);
+    .top-nav{
+        position: absolute;
+        top: 0;
+    }
+
+    .bottom-nav{
+        position: absolute;
+        bottom: 40px;
+    }
+}

@@ -1,0 +1,48 @@
+.text-black {
+  color: $black;
+}
+
+.text-base {
+  color: $base-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $base-color;
+  }
+}
+
+
+.text-brand {
+  color: $anchor-color;
+}
+
+.font-medium {
+  font-weight: 600;
+}
+
+.content-none {
+
+  &:before,
+  &:after {
+    content: none !important;
+  }
+}
+
+.btn {
+  font-weight: 500;
+}
+
+.list-style-none{
+  list-style-type: none;
+}
+
+.w-30{
+  min-width: 30px;
+  width: 30px;
+  max-width: 30px;
+}
+
+.no-wrap{
+  white-space: nowrap;
+}

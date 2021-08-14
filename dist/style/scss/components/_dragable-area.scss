@@ -1,0 +1,44 @@
+.dragable-area{
+    width: calc(100% - 30px);
+    height: calc(100vh - 150px);
+    a{
+        border-left: 3px solid transparent;
+    }
+    [class^="border-"], [class*=" border-"]{
+        .fa{
+            background: rgba(0,0,0,.02);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+        }
+
+    }
+    .border-success{
+        i{
+            background: rgba(40, 167, 69, .3);
+            color: rgba(40, 167, 69);
+        }
+    }
+    .border-warning{
+        i{
+            background: rgba(255, 193, 7, .3);
+            color: rgba(255, 193, 7);
+        }
+    }
+    .border-info{
+        i{
+            background: rgba(23, 162, 184, .3);
+            color: rgba(23, 162, 184);
+        }
+    }
+    .border-danger{
+        i{
+            background: rgba(220, 53, 69, 0.3);
+            color: rgba(220, 53, 69);
+        }
+    }
+
+}

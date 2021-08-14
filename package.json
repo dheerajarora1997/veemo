@@ -1,0 +1,25 @@
+{
+  "name": "veemo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass  scss/style.scss css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "bootstrap-scss": "^4.5.3",
+    "bootstrap-select": "^1.13.18",
+    "bootstrap-tour": "^0.12.0",
+    "bootstrap-tourist": "^0.3.2",
+    "font-awesome": "^4.7.0",
+    "font-awesome-scss": "^1.0.0",
+    "jquery-bootstrap-scrolling-tabs": "^2.6.1",
+    "leader-line": "^1.0.5",
+    "node-sass": "^6.0.1",
+    "owl.carousel": "^2.3.4",
+    "plain-draggable": "^2.5.14"
+  },
+  "description": ""
+}
