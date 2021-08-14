@@ -176,12 +176,14 @@
 	$('[data-toggle="popover"]').popover();
 	$('[data-toggle="tooltip"]').tooltip();
 	window.addEventListener('load', function () {
-		new LeaderLine(
-			LeaderLine.mouseHoverAnchor(document.getElementById('no-bot-found'), 'draw',
-				{ animOptions: { duration: 2000 } }, { style: { backgroundColor: null } }),
-			document.getElementById('build-bot')
-		);
-	});
+	      const line = new LeaderLine(
+		document.getElementById('no-bot-found'),
+		document.getElementById('build-bot'),
+		{ hide: true }
+	      );
+
+	      setTimeout(() => line.show('draw', { duration: 1000 }), 1000);
+    	});
 </script>
 
 </html>
